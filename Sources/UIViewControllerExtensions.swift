@@ -216,6 +216,15 @@ extension UIViewController {
         return CGRect(x: view.x, y: top, width: view.w, height: bottom - top)
     }
     
+    ///EZSE: Toggles the navigation controller's navigationBar visibility - Explicitly set the animation to true on default.
+    open func toggleNavigationBar(_ toggle: Bool, animated : Bool = true) {
+        
+        if let navigationController = self.navigationController {
+            
+            navigationController.setNavigationBarHidden(toggle, animated: animated);
+        }
+    }
+    
     // MARK: - VC Flow
     
     ///EZSE: Pushes a view controller onto the receiver’s stack and updates the display.
