@@ -221,7 +221,7 @@ extension UIViewController {
         
         if let navigationController = self.navigationController {
             
-            navigationController.setNavigationBarHidden(toggle, animated: animated);
+            navigationController.setNavigationBarHidden(!toggle, animated: animated);
         }
     }
     
